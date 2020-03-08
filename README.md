@@ -58,7 +58,7 @@ $ terraform apply
 
 - Use the AWS CLI update-kubeconfig command to create or update your kubeconfig for your cluster.
 ```
-$ aws eks update-kubeconfig --name tf-eks
+$ aws eks update-kubeconfig --name myproject-eks
 ```
 
 - Test your configuration
