@@ -19,13 +19,13 @@
 - kubeconfig file
 - Managed Node Group
 
-## VPC Architecture Diagram: https://www.draw.io/#G1I1q3XWw3KAdFl1bfwG3AbW_tR6GKMXsB
+## Architecture Diagram: https://www.draw.io/#G1I1q3XWw3KAdFl1bfwG3AbW_tR6GKMXsB
 
 ![Image description](https://github.com/jrdalino/aws-eks-terraform/blob/master/images/aws_vpc_architecture_diagram.png)
 
 - TODO: Add EKS Cluster and Node Group to diagram
 
-## Prerequisites:
+## Prerequisites
 - Provision an S3 bucket to store Terraform State and DynamoDB for state-lock
 using https://github.com/jrdalino/aws-tfstate-backend-terraform
 
