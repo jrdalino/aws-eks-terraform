@@ -1,6 +1,5 @@
 # General
 aws_region  = "ap-southeast-2"
-aws_profile = "leon.tanner@excelian.com"
 aws_account = "222337787619"
 
 # Network - General

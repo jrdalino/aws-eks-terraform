@@ -93,7 +93,8 @@ resource "aws_subnet" "gateway" {
   vpc_id            = aws_vpc.this.id
 
   tags = {
-     Name = var.aws_subnet_gateway_name
+     Name                     = var.aws_subnet_gateway_name
+     "kubernetes.io/role/elb" = "1"
   }
 }
 

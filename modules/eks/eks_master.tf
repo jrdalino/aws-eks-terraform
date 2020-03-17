@@ -64,9 +64,23 @@ resource "aws_eks_cluster" "this" {
     subnet_ids         = var.app_gtwy_subnet_ids
     security_group_ids = ["${aws_security_group.this.id}"]
   }
+
+  enabled_cluster_log_types = ["api", "audit"]
+
+  # TODO: encryption_config
+
+  # TODO: tags
  
+  version  = "1.15" # (Optional) Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS. 
+
   depends_on = [
     aws_iam_role_policy_attachment.cluster_policy,
     aws_iam_role_policy_attachment.service_policy,
+    aws_cloudwatch_log_group.this,
   ]
+}
+
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/aws/eks/${var.aws_eks_cluster_name}/cluster"
+  retention_in_days = 7
 }
