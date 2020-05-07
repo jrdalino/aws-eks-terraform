@@ -1,6 +1,6 @@
 # General
-aws_region  = "ap-southeast-2"
-aws_account = "222337787619"
+aws_region  = "ap-southeast-1"
+aws_account = "707538076348"
 
 # Network - General
 cidr         = "10.0.0.0/16"
@@ -30,7 +30,7 @@ aws_subnet_database_name    = "myproject-database-subnet"
 
 # EKS - Cluster
 aws_eks_cluster_name          = "myproject-eks"
-accessing_computer_ip         = "219.74.92.53"
+accessing_computer_ip         = "0.0.0.0"
 aws_iam_role_eks_cluster_name = "myproject-eks-cluster-service-role"
 aws_security_group_name       = "myproject-eks-cluster-to-worker-nodes-security-group"
 
