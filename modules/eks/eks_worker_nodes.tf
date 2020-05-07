@@ -72,15 +72,15 @@ resource "aws_eks_node_group" "this" {
 
   disk_size = 20 # (Optional) Disk size in GiB for worker nodes. Defaults to 20. Terraform will only perform drift detection if a configuration value is provided. 
 
-  instance_types = ["t3.medium"] # (Optional) Set of instance types associated with the EKS Node Group. Defaults to ["t3.medium"]. Terraform will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set. 
+  instance_types = ["t3.small"] # (Optional) Set of instance types associated with the EKS Node Group. Defaults to ["t3.medium"]. Terraform will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set. 
 
   # labels - (Optional) Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed. 
 
-  release_version = "1.15.10-20200228" # (Optional) AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.  
+  release_version = "1.16.8-20200423" # (Optional) AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version. https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html
 
   # remote_access - (Optional) Configuration block with remote access settings. Detailed below. 
 
   # tags - (Optional) Key-value mapping of resource tags. 
 
-  version = "1.15" # (Optional) Kubernetes version. Defaults to EKS Cluster Kubernetes version. Terraform will only perform drift detection if a configuration value is provided. 
+  version = "1.16" # (Optional) Kubernetes version. Defaults to EKS Cluster Kubernetes version. Terraform will only perform drift detection if a configuration value is provided. 
 }
