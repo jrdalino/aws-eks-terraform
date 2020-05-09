@@ -37,7 +37,7 @@ $ kubectl version
 
 - AWS CLI
 ```
-$ brew install aws-iam-authenticator
+$ brew install awscli
 $ aws --version
 ```
 

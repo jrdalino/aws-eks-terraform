@@ -30,7 +30,7 @@ aws_subnet_database_name    = "myproject-database-subnet"
 
 # EKS - Cluster
 aws_eks_cluster_name          = "myproject-eks"
-accessing_computer_ip         = "0.0.0.0"
+accessing_computer_ip         = "210.10.0.22" # Replace this with your Public IP
 aws_iam_role_eks_cluster_name = "myproject-eks-cluster-service-role"
 aws_security_group_name       = "myproject-eks-cluster-to-worker-nodes-security-group"
 
